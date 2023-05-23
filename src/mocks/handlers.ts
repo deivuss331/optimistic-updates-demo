@@ -14,7 +14,7 @@ const todos = [
 ];
 
 export const handlers = [
-  rest.get('/api/todos', (req, res, ctx) => res(ctx.delay(350), ctx.status(200), ctx.json(todos))),
+  rest.get('/api/todos', (_, res, ctx) => res(ctx.delay(350), ctx.status(200), ctx.json(todos))),
 
   rest.post('/api/todos', async (req, res, ctx) => {
     const { title } = await req.json();
