@@ -22,4 +22,4 @@ App uses [MSW](https://mswjs.io/) to mock API calls. See `./src/mocks` for more 
 
 ### 🔍 Live demo
 
-TODO:: add link to demo
+[Click here](https://deivuss331.github.io/optimistic-updates-demo/)
