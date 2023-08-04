@@ -5,7 +5,15 @@ import { worker } from './mocks/browser';
 
 import './assets/css/tailwind.css';
 
-worker.start();
+if (window.location.pathname === '/optimistic-updates-demo') {
+  window.location.pathname = '/optimistic-updates-demo/'
+}
+
+worker.start({
+  serviceWorker: {
+    url: '/optimistic-updates-demo/mockServiceWorker.js',
+  },
+});
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
